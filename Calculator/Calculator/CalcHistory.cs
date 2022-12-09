@@ -10,17 +10,21 @@ namespace Calculator
      * История вычислений
      */
 
-    internal class CalcHistory
+    public class CalcHistory
     {
-        private String inputString { get; set; }
+        public String inputString {get; set;}
 
-        private string result { get; set; }
+        public String result { get; set; }
 
-        public CalcHistory() { }
-
-        public CalcHistory(String inputString ) 
-        { 
+        public CalcHistory(string inputString, string result)
+        {
             this.inputString = inputString;
+            this.result = result;
+        }
+
+        public override string? ToString()
+        {
+            return inputString + " = " + result;
         }
     }
 }
